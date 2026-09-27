@@ -16,11 +16,15 @@ section{padding:24px 0}.titleline{display:flex;justify-content:space-between;ali
 .about{display:grid;grid-template-columns:1fr 1fr;gap:18px}.box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.box p{color:var(--muted);margin-bottom:0}
 footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;color:var(--muted);font-size:13px}
 .mobile{display:none}.menu{display:none}
-@media(max-width:760px){header{height:62px}.desktop{display:none}.menu{display:block;margin-left:auto}.hero{grid-template-columns:1fr;padding-top:32px}.badge{display:none}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>.arrow{display:none}.card{min-width:84%;scroll-snap-align:start}.about{grid-template-columns:1fr}.hero h1{font-size:40px}.mobile{display:block}nav{gap:12px}}
+#mobileNav{position:absolute;left:0;right:0;top:62px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.18);padding:8px 4%!important}
+#mobileNav[hidden]{display:none!important}
+#mobileNav a{display:block;padding:13px 4px;border-bottom:1px solid var(--line);font-weight:650}
+#mobileNav a:last-child{border-bottom:0}
+@media(max-width:760px){header{height:62px}.desktop{display:none}.menu{display:block;margin-left:auto}.hero{min-height:auto}.hero{grid-template-columns:1fr;padding-top:32px}.badge{display:none}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>.arrow{display:none}.card{min-width:84%;scroll-snap-align:start}.about{grid-template-columns:1fr}.hero h1{font-size:40px}.mobile{display:block}nav{gap:12px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="#"><b>DP→</b> Tech na Prática</a><div class="desktop"><a href="#">Início</a>&nbsp;&nbsp;&nbsp;<a href="#atalho">Atalho DP</a>&nbsp;&nbsp;&nbsp;<a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;<a href="#contato">Contato</a></div><button id="theme" aria-label="Alternar tema">☀︎ / ☾</button><button class="menu" id="menu">☰</button></nav><div id="mobileNav" class="mobile" hidden style="padding:14px 0"><a href="#">Início</a> · <a href="#atalho">Atalho DP</a> · <a href="#sobre">Sobre</a> · <a href="#contato">Contato</a></div></div></header>
+<header><div class="wrap"><nav><a class="brand" href="#"><b>DP→</b> Tech na Prática</a><div class="desktop"><a href="#">Início</a>&nbsp;&nbsp;&nbsp;<a href="#atalho">Atalho DP</a>&nbsp;&nbsp;&nbsp;<a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;<a href="#contato">Contato</a></div><button id="theme" aria-label="Alternar tema">☀︎ / ☾</button><button class="menu" id="menu">☰</button></nav><div id="mobileNav" hidden><a href="#">Início</a><a href="#atalho">Atalho DP</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div></div></header>
 <main class="wrap">
 <section class="hero"><div><div class="eyebrow">CONTEÚDO PRÁTICO. APLICAÇÃO REAL.</div><h1>Tecnologia para facilitar a rotina do <span style="color:var(--mag)">Departamento Pessoal.</span></h1><p>Automação, ferramentas, IA e conhecimento aplicados ao dia a dia do DP — de forma simples e prática.</p><button onclick="document.querySelector('#atalho').scrollIntoView({behavior:'smooth'})">Ver Atalhos DP →</button></div><div class="badge"><div class="dp">DP<span>→</span></div><strong>DP TECH NA PRÁTICA</strong><p style="color:var(--muted)">Identidade oficial será aplicada na próxima etapa.</p></div></section>
 <section id="atalho"><div class="titleline"><div><small>SÉRIE</small><h2>Atalho DP</h2></div><small>← #001 &nbsp; #002 →</small></div><div class="carousel"><button class="arrow">‹</button><article class="card"><div class="thumb">eSocial <i>A UM CLIQUE</i></div><div class="body"><span class="tag">ATALHO DP #001</span><h3>eSocial a um clique</h3><p>Acesso rápido para facilitar uma rotina recorrente do DP.</p></div></article><article class="card"><div class="thumb">JUNTAR <i>PDFs</i></div><div class="body"><span class="tag">ATALHO DP #002</span><h3>Como juntar vários PDFs</h3><p>Uma forma simples de reunir vários arquivos em um único PDF.</p></div></article><button class="arrow">›</button></div></section>
@@ -31,5 +35,5 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;colo
 const root=document.documentElement,t=document.getElementById('theme'),m=document.getElementById('menu'),mn=document.getElementById('mobileNav');
 const saved=localStorage.getItem('dp-theme');if(saved)root.dataset.theme=saved;
 t.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('dp-theme',root.dataset.theme)};
-m.onclick=()=>mn.hidden=!mn.hidden;
+m.onclick=()=>{mn.hidden=!mn.hidden;m.setAttribute('aria-expanded',String(!mn.hidden))};mn.querySelectorAll('a').forEach(a=>a.onclick=()=>mn.hidden=true);
 </script></body></html>

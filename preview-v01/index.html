@@ -2,19 +2,20 @@
 <html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DP Tech na Prática — V0.1 Preview</title>
+<title>DP Tech na Prática — V0.2 Preview</title>
 <meta name="description" content="Tecnologia para facilitar a rotina do Departamento Pessoal.">
 <style>
 :root{--bg:#f4f4f2;--panel:#fff;--text:#202124;--muted:#666;--line:#ddd;--mag:#ec0a8c;--graph:#26272b}
 html[data-theme="dark"]{--bg:#25262a;--panel:#303136;--text:#f6f6f4;--muted:#b8b8bc;--line:#44464c}
 *{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);transition:.2s}
-.wrap{width:min(1180px,92%);margin:auto}header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;background:color-mix(in srgb,var(--bg) 94%,transparent);position:sticky;top:0;z-index:5}
+.wrap{width:min(1440px,92%);margin:auto}header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;background:color-mix(in srgb,var(--bg) 94%,transparent);position:sticky;top:0;z-index:5}
 nav{display:flex;align-items:center;gap:26px}.brand{font-weight:800;font-size:21px;margin-right:auto}.brand b{color:var(--mag)}a{color:inherit;text-decoration:none}nav a:hover{color:var(--mag)}
-button{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.hero{padding:50px 0 30px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.eyebrow{color:var(--mag);font-weight:800;letter-spacing:.08em}.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.02;margin:10px 0 16px}.hero p{color:var(--muted);font-size:18px;max-width:680px}.badge{border:1px solid var(--line);background:var(--panel);border-radius:22px;padding:28px;text-align:center}.dp{font-size:72px;font-weight:900}.dp span{color:var(--mag)}
+button{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:9px 12px;cursor:pointer}.hero{padding:clamp(30px,4vh,50px) 0 clamp(20px,3vh,30px);display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}.eyebrow{color:var(--mag);font-weight:800;letter-spacing:.08em}.hero h1{font-size:clamp(38px,4.2vw,68px);line-height:1.02;margin:10px 0 16px}.hero p{color:var(--muted);font-size:18px;max-width:680px}.badge{border:1px solid var(--line);background:var(--panel);border-radius:22px;padding:28px;text-align:center}.dp{font-size:72px;font-weight:900}.dp span{color:var(--mag)}
 section{padding:24px 0}.titleline{display:flex;justify-content:space-between;align-items:end;margin-bottom:15px}.titleline h2{margin:0;font-size:24px}.titleline small{color:var(--muted)}
-.carousel{display:grid;grid-template-columns:40px 1fr 1fr 40px;gap:14px;align-items:stretch}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#15161a,#35363c);display:grid;place-items:center;font-size:25px;font-weight:900;color:white}.thumb i{color:var(--mag);font-style:normal}.card .body{padding:15px}.tag{font-size:12px;color:var(--mag);font-weight:800}.card h3{margin:6px 0}.card p{margin:0;color:var(--muted)}.arrow{align-self:center;height:48px;padding:0}
+.carousel{display:grid;grid-template-columns:40px repeat(2,minmax(0,1fr)) 40px;gap:14px;align-items:stretch}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#15161a,#35363c);display:grid;place-items:center;font-size:25px;font-weight:900;color:white}.thumb i{color:var(--mag);font-style:normal}.card .body{padding:15px}.tag{font-size:12px;color:var(--mag);font-weight:800}.card h3{margin:6px 0}.card p{margin:0;color:var(--muted)}.arrow{align-self:center;height:48px;padding:0}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:18px}.box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.box p{color:var(--muted);margin-bottom:0}
-footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:22px;padding:16px 0 20px;color:var(--muted);font-size:13px}
+.footerrow{display:flex;justify-content:space-between;align-items:center;gap:18px}.socials{display:flex;gap:18px}.socials a:hover{color:var(--mag)}
 .mobile{display:none}.menu{display:none}
 #mobileNav{position:absolute;left:0;right:0;top:62px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.18);padding:8px 4%!important}
 #mobileNav[hidden]{display:none!important}
@@ -22,7 +23,8 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;colo
 #mobileNav a:hover,#mobileNav a:focus-visible{background:color-mix(in srgb,var(--mag) 12%,var(--panel));color:var(--mag);outline:none}
 #mobileNav a:active,#mobileNav a.tap-active{background:color-mix(in srgb,var(--mag) 20%,var(--panel));color:var(--mag);transform:scale(.99)}
 #mobileNav a:last-child{border-bottom:0}
-@media(max-width:760px){header{height:62px}.desktop{display:none}.menu{display:block;margin-left:auto}.hero{min-height:auto}.hero{grid-template-columns:1fr;padding-top:32px}.badge{display:none}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>.arrow{display:none}.card{min-width:84%;scroll-snap-align:start}.about{grid-template-columns:1fr}.hero h1{font-size:40px}.mobile{display:block}nav{gap:12px}}
+@media(min-width:1500px){.hero{grid-template-columns:1.35fr .65fr}.thumb{aspect-ratio:2/1}.about{grid-template-columns:1.2fr .8fr}}
+@media(max-width:760px){header{height:62px}.desktop{display:none}.menu{display:block;margin-left:auto}.hero{min-height:auto}.hero{grid-template-columns:1fr;padding:24px 0 14px}.badge{display:none}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>.arrow{display:none}.card{min-width:84%;scroll-snap-align:start}.about{grid-template-columns:1fr}.hero h1{font-size:clamp(36px,10.5vw,46px);margin:7px 0 12px}.hero p{font-size:17px;margin:0 0 18px}.eyebrow{font-size:11px}section{padding:18px 0}.titleline{margin-bottom:10px}.about{gap:12px}.footerrow{align-items:flex-start;flex-direction:column;gap:8px}.socials{gap:14px}.mobile{display:block}nav{gap:12px}}
 </style>
 </head>
 <body>
@@ -30,9 +32,9 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;colo
 <main class="wrap">
 <section class="hero"><div><div class="eyebrow">CONTEÚDO PRÁTICO. APLICAÇÃO REAL.</div><h1>Tecnologia para facilitar a rotina do <span style="color:var(--mag)">Departamento Pessoal.</span></h1><p>Automação, ferramentas, IA e conhecimento aplicados ao dia a dia do DP — de forma simples e prática.</p><button onclick="document.querySelector('#atalho').scrollIntoView({behavior:'smooth'})">Ver Atalhos DP →</button></div><div class="badge"><div class="dp">DP<span>→</span></div><strong>DP TECH NA PRÁTICA</strong><p style="color:var(--muted)">Identidade oficial será aplicada na próxima etapa.</p></div></section>
 <section id="atalho"><div class="titleline"><div><small>SÉRIE</small><h2>Atalho DP</h2></div><small>← #001 &nbsp; #002 →</small></div><div class="carousel"><button class="arrow">‹</button><article class="card"><div class="thumb">eSocial <i>A UM CLIQUE</i></div><div class="body"><span class="tag">ATALHO DP #001</span><h3>eSocial a um clique</h3><p>Acesso rápido para facilitar uma rotina recorrente do DP.</p></div></article><article class="card"><div class="thumb">JUNTAR <i>PDFs</i></div><div class="body"><span class="tag">ATALHO DP #002</span><h3>Como juntar vários PDFs</h3><p>Uma forma simples de reunir vários arquivos em um único PDF.</p></div></article><button class="arrow">›</button></div></section>
-<section id="sobre" class="about"><div class="box"><span class="tag">SOBRE</span><h2>DP Tech na Prática</h2><p>Tecnologia e conhecimento a favor do Departamento Pessoal, com foco em soluções que possam ser aplicadas na rotina.</p></div><div class="box" id="contato"><span class="tag">EM CONSTRUÇÃO</span><h2>V0.1 de comportamento</h2><p>Teste o tema claro/escuro, o menu no celular e a adaptação dos cards. Logo e thumbnails oficiais ainda não foram inseridos nesta prévia.</p></div></section>
+<section id="sobre" class="about"><div class="box"><span class="tag">SOBRE</span><h2>DP Tech na Prática</h2><p>Tecnologia e conhecimento a favor do Departamento Pessoal, com foco em soluções que possam ser aplicadas na rotina.</p></div><div class="box" id="contato"><span class="tag">EM CONSTRUÇÃO</span><h2>V0.2 responsiva</h2><p>Layout agora aproveita melhor telas grandes, reduz a altura do hero no celular e mantém navegação compacta. Assets oficiais entram na próxima etapa.</p></div></section>
 </main>
-<footer><div class="wrap">© 2026 DP Tech na Prática · YouTube · Instagram · TikTok</div></footer>
+<footer><div class="wrap footerrow"><span>© 2026 DP Tech na Prática</span><span class="socials"><a href="#" title="Link oficial será aplicado">YouTube</a><a href="#" title="Link oficial será aplicado">Instagram</a><a href="#" title="Link oficial será aplicado">TikTok</a></span></div></footer>
 <script>
 const root=document.documentElement,t=document.getElementById('theme'),m=document.getElementById('menu'),mn=document.getElementById('mobileNav');
 const saved=localStorage.getItem('dp-theme');if(saved)root.dataset.theme=saved;

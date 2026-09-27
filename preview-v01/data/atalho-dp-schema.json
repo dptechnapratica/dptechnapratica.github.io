@@ -1,0 +1,33 @@
+{
+  "template_version": "1.0",
+  "source_of_truth": "Monitoramento — DP Tech na Prática / Conteúdos",
+  "optional_sections": [
+    "codigo",
+    "prompt",
+    "downloads",
+    "referencias"
+  ],
+  "rules": {
+    "hide_empty_optional_sections": true,
+    "preview_robots": "noindex,nofollow",
+    "production_robots": "index,follow",
+    "preserve_approved_light_dark_brand_assets": true
+  },
+  "fields": [
+    "id",
+    "conteudo",
+    "quadro",
+    "data_publicacao",
+    "status",
+    "youtube_url",
+    "thumbnail_url",
+    "descricao",
+    "categoria",
+    "tags",
+    "passos",
+    "codigo",
+    "prompt",
+    "downloads",
+    "referencias"
+  ]
+}

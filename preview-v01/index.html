@@ -18,7 +18,9 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;colo
 .mobile{display:none}.menu{display:none}
 #mobileNav{position:absolute;left:0;right:0;top:62px;background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.18);padding:8px 4%!important}
 #mobileNav[hidden]{display:none!important}
-#mobileNav a{display:block;padding:13px 4px;border-bottom:1px solid var(--line);font-weight:650}
+#mobileNav a{display:block;padding:13px 10px;border-bottom:1px solid var(--line);font-weight:650;border-radius:8px;transition:background .15s,color .15s,transform .08s}
+#mobileNav a:hover,#mobileNav a:focus-visible{background:color-mix(in srgb,var(--mag) 12%,var(--panel));color:var(--mag);outline:none}
+#mobileNav a:active,#mobileNav a.tap-active{background:color-mix(in srgb,var(--mag) 20%,var(--panel));color:var(--mag);transform:scale(.99)}
 #mobileNav a:last-child{border-bottom:0}
 @media(max-width:760px){header{height:62px}.desktop{display:none}.menu{display:block;margin-left:auto}.hero{min-height:auto}.hero{grid-template-columns:1fr;padding-top:32px}.badge{display:none}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.carousel>.arrow{display:none}.card{min-width:84%;scroll-snap-align:start}.about{grid-template-columns:1fr}.hero h1{font-size:40px}.mobile{display:block}nav{gap:12px}}
 </style>
@@ -35,5 +37,5 @@ footer{border-top:1px solid var(--line);margin-top:28px;padding:20px 0 28px;colo
 const root=document.documentElement,t=document.getElementById('theme'),m=document.getElementById('menu'),mn=document.getElementById('mobileNav');
 const saved=localStorage.getItem('dp-theme');if(saved)root.dataset.theme=saved;
 t.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('dp-theme',root.dataset.theme)};
-m.onclick=()=>{mn.hidden=!mn.hidden;m.setAttribute('aria-expanded',String(!mn.hidden))};mn.querySelectorAll('a').forEach(a=>a.onclick=()=>mn.hidden=true);
+m.onclick=()=>{mn.hidden=!mn.hidden;m.setAttribute('aria-expanded',String(!mn.hidden))};mn.querySelectorAll('a').forEach(a=>{a.addEventListener('pointerdown',()=>a.classList.add('tap-active'));a.addEventListener('pointerup',()=>setTimeout(()=>a.classList.remove('tap-active'),140));a.onclick=()=>setTimeout(()=>mn.hidden=true,100)});
 </script></body></html>

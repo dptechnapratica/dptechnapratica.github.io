@@ -74,7 +74,7 @@ html[data-theme="dark"] .theme .theme-moon{display:block!important}
 .comments-section h2{margin:4px 0 8px;font-size:28px}
 .comments-section>.comments-intro{color:var(--muted);margin:0 0 18px;max-width:760px}
 .comments-box-wrap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
-.commentbox{min-height:110px}
+#graphcomment{min-height:341px}\n@media(min-width:501px){#graphcomment{min-height:304px}}\n@media(min-width:600px){#graphcomment{min-height:286px}}
 .comments-moderation{font-size:12px;color:var(--muted);margin:12px 0 0}
 .comments-privacy{font-size:12px;color:var(--muted);margin:9px 0 0;line-height:1.45}
 .comments-privacy a{color:var(--mag);text-decoration:none;font-weight:700}
@@ -91,15 +91,38 @@ html[data-theme="dark"] .theme .theme-moon{display:block!important}
 <h2>Comentários e sugestões</h2>
 <p class="comments-intro">Ficou com alguma dúvida ou conhece outra forma de fazer? Compartilhe sua experiência ou deixe uma sugestão para os próximos Atalhos DP.</p>
 <div class="comments-box-wrap">
-<div class="commentbox" id="atalho-dp-001-comments"></div>
+<div id="graphcomment"></div>
 <p class="comments-moderation">Os comentários passam por moderação antes de serem publicados.</p>
-<p class="comments-privacy"><strong>Privacidade:</strong> esta área utiliza o serviço externo CommentBox.io. Ao comentar, informações necessárias para identificação e funcionamento dos comentários podem ser processadas pelo serviço. O CommentBox.io informa que seu e-mail não é exibido publicamente. <a href="https://commentbox.io/privacy/" target="_blank" rel="noopener">Consultar política de privacidade →</a></p>
+<p class="comments-privacy"><strong>Privacidade:</strong> esta área utiliza o serviço externo GraphComment para publicação e gerenciamento dos comentários. Ao utilizar a área de comentários, dados necessários ao funcionamento e à identificação da conta podem ser processados pelo serviço. <a href="https://www.graphcomment.com/en/privacy" target="_blank" rel="noopener">Consultar política de privacidade →</a></p>
 </div>
-</section></article></div><div class="sidebar-stack"><aside class="side"><span class="tag">Neste conteúdo</span><h3>Atalho DP #001</h3><a href="#video">▶ Assistir ao vídeo</a><a href="#passos">✓ Ver os 4 atalhos</a><a href="https://youtu.be/fZmFtZFKMUA" target="_blank" rel="noopener">↗ Abrir no YouTube</a></aside><aside class="side comments-card"><span class="comments-icon" aria-hidden="true">📝</span><span class="tag">COMENTÁRIOS</span><h3>Dúvidas ou sugestões?</h3><p>Compartilhe sua experiência ou deixe uma ideia para os próximos Atalhos DP.</p><a class="comments-link" href="#comentarios"><span id="commentCountLabel">Ver comentários →</span></a></aside></div></div></main><footer><div class="wrap footerrow"><span>© 2026 DP Tech na Prática</span><span class="sep">|</span><a href="https://www.youtube.com/@dptechnapratica" target="_blank" rel="noopener">YouTube</a><span class="sep">|</span><a href="https://www.instagram.com/dptechnapratica/" target="_blank" rel="noopener">Instagram</a><span class="sep">|</span><a href="https://www.tiktok.com/@dptechnapratica" target="_blank" rel="noopener">TikTok</a></div></footer><script>(()=>{const r=document.documentElement,b=document.getElementById('theme'),m=document.getElementById('menu'),n=document.getElementById('mobileNav');const saved=localStorage.getItem('dp-theme');if(saved)r.dataset.theme=saved;const icon=()=>{if(b)b.setAttribute('aria-label',r.dataset.theme==='dark'?'Mudar para modo claro':'Mudar para modo escuro')};icon();if(b)b.onclick=()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';localStorage.setItem('dp-theme',r.dataset.theme);icon()};if(m&&n){m.onclick=()=>{n.hidden=!n.hidden;m.setAttribute('aria-expanded',String(!n.hidden))};n.querySelectorAll('a').forEach(a=>a.onclick=()=>{n.hidden=true})};window.addEventListener('load',()=>{if(window.innerWidth>820){setTimeout(()=>{const v=document.getElementById('video');if(!v)return;const r=v.getBoundingClientRect();const overflow=r.bottom-window.innerHeight;if(overflow>0)window.scrollBy({top:overflow+14,behavior:'smooth'});},180)}});})();</script><script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-<script>
-(()=>{const projectId='5755047795228672-proj';let cleanup=null,timer=null;
-const mountComments=()=>{if(typeof commentBox!=='function')return;if(typeof cleanup==='function')cleanup();const dark=document.documentElement.dataset.theme==='dark';cleanup=commentBox(projectId,{textColor:dark?'#f5f5f5':'#202124',subtextColor:dark?'#c7c7c7':'#626262',onCommentCount(count){const el=document.getElementById('commentCountLabel');if(!el)return;el.textContent=count===0?'Seja o primeiro a comentar →':count===1?'Ver 1 comentário →':`Ver ${count} comentários →`;}});};
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mountComments);else mountComments();
-new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(mountComments,80)}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+</section></article></div><div class="sidebar-stack"><aside class="side"><span class="tag">Neste conteúdo</span><h3>Atalho DP #001</h3><a href="#video">▶ Assistir ao vídeo</a><a href="#passos">✓ Ver os 4 atalhos</a><a href="https://youtu.be/fZmFtZFKMUA" target="_blank" rel="noopener">↗ Abrir no YouTube</a></aside><aside class="side comments-card"><span class="comments-icon" aria-hidden="true">📝</span><span class="tag">COMENTÁRIOS</span><h3>Dúvidas ou sugestões?</h3><p>Compartilhe sua experiência ou deixe uma ideia para os próximos Atalhos DP.</p><a class="comments-link" href="#comentarios">Ver comentários →</a></aside></div></div></main><footer><div class="wrap footerrow"><span>© 2026 DP Tech na Prática</span><span class="sep">|</span><a href="https://www.youtube.com/@dptechnapratica" target="_blank" rel="noopener">YouTube</a><span class="sep">|</span><a href="https://www.instagram.com/dptechnapratica/" target="_blank" rel="noopener">Instagram</a><span class="sep">|</span><a href="https://www.tiktok.com/@dptechnapratica" target="_blank" rel="noopener">TikTok</a></div></footer><script>(()=>{const r=document.documentElement,b=document.getElementById('theme'),m=document.getElementById('menu'),n=document.getElementById('mobileNav');const saved=localStorage.getItem('dp-theme');if(saved)r.dataset.theme=saved;const icon=()=>{if(b)b.setAttribute('aria-label',r.dataset.theme==='dark'?'Mudar para modo claro':'Mudar para modo escuro')};icon();if(b)b.onclick=()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';localStorage.setItem('dp-theme',r.dataset.theme);icon()};if(m&&n){m.onclick=()=>{n.hidden=!n.hidden;m.setAttribute('aria-expanded',String(!n.hidden))};n.querySelectorAll('a').forEach(a=>a.onclick=()=>{n.hidden=true})};window.addEventListener('load',()=>{if(window.innerWidth>820){setTimeout(()=>{const v=document.getElementById('video');if(!v)return;const r=v.getBoundingClientRect();const overflow=r.bottom-window.innerHeight;if(overflow>0)window.scrollBy({top:overflow+14,behavior:'smooth'});},180)}});})();</script><script type="text/javascript">
+var __semio__params = {
+  graphcommentId: "dptechnapratica",
+  behaviour: {
+    uid: "atalho-dp-001",
+    url: "https://dptechnapratica.github.io/atalho-dp/esocial-a-um-clique/",
+    readonly: false,
+    sort: "newest",
+    countPerPage: 20
+  },
+  statistics: {
+    pageTitle: "eSocial a um clique: crie atalhos e ganhe tempo",
+    category: "Atalho DP"
+  },
+  integration: {
+    fixedHeaderHeight: 74
+  }
+};
+function __semio__onload(){
+  __semio__gc_graphlogin(__semio__params);
+}
+(function(){
+  var gc=document.createElement("script");
+  gc.type="text/javascript";
+  gc.async=true;
+  gc.defer=true;
+  gc.onload=__semio__onload;
+  gc.src="https://integration.graphcomment.com/gc_graphlogin.js?"+Date.now();
+  (document.head||document.body).appendChild(gc);
 })();
 </script></body></html>

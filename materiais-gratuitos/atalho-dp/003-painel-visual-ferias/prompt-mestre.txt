@@ -1,0 +1,54 @@
+PROMPT MESTRE OFICIAL — ATALHO DP #003
+
+Finalidade: demonstração do fluxo ChatGPT + Excel para transformar uma escala de férias em um painel visual.
+Status: VALIDADO no teste com ChatGPT Free.
+Arquivo-base oficial: “Atalho DP #003 - Arquivo de Entrada FINAL”.
+
+PROMPT PARA A GRAVAÇÃO
+
+Tenho uma planilha de escala de férias exportada do meu sistema de folha de pagamento.
+
+Quero transformar essas informações em algo mais visual e fácil de acompanhar no dia a dia.
+
+Analise a planilha anexada e crie uma nova versão em Excel, preservando todos os dados, datas e períodos existentes. Não recalcule, corrija ou altere os prazos informados na planilha.
+
+Mantenha a base original e crie uma nova aba chamada “Painel Visual”.
+
+Considere cada período aquisitivo separadamente, pois um mesmo funcionário pode possuir mais de um período de férias. Não elimine períodos repetidos apenas porque pertencem ao mesmo funcionário.
+
+Para determinar a situação de cada período, utilize:
+- a competência informada na própria planilha como referência da análise, e não a data atual;
+- a coluna “Último prazo — 30 dias” como referência para o prazo crítico informado pelo sistema.
+
+No Painel Visual, classifique os períodos da seguinte maneira:
+
+🔴 Estado Crítico: períodos cujo prazo crítico seja anterior ou igual ao último dia da competência analisada. Esses casos devem receber uma orientação curta indicando que a concessão/agendamento das férias deve ser tratada com prioridade imediata.
+
+🟡 Atenção: períodos cujo “Último prazo — 30 dias” ocorra no mês imediatamente seguinte à competência analisada. Esses casos devem ser destacados para que o agendamento das férias seja preparado com antecedência.
+
+Exemplo da regra: se a competência informada na planilha for 10/2026, considere em Estado Crítico os prazos críticos anteriores ou iguais a 31/10/2026 e em Atenção os prazos críticos que ocorrerem durante 11/2026.
+
+No painel, mostre somente as informações necessárias para a tomada de decisão:
+
+Matrícula | Colaborador | Período aquisitivo | Prazo crítico | Saldo de férias | Situação/Ação
+
+Os demais períodos não precisam aparecer no painel principal, mas devem permanecer integralmente preservados na base original.
+
+Organize o Painel Visual com aparência profissional, limpa e fácil de interpretar. Utilize cores diferentes para Estado Crítico e Atenção, remova as linhas de grade da aba do painel e evite gráficos desnecessários.
+
+Antes de gerar o arquivo final:
+1. confira se nenhum funcionário ou período aquisitivo foi perdido;
+2. confira especialmente os funcionários que possuem mais de um período;
+3. informe no chat qual competência foi identificada;
+4. informe quantos períodos foram classificados como Estado Crítico;
+5. informe quantos períodos foram classificados como Atenção.
+
+Depois dessas conferências, gere a nova planilha em formato Excel (.xlsx) para download.
+
+RESULTADO ESPERADO NO ARQUIVO-BASE DO #003
+- Competência: 10/2026
+- Períodos aquisitivos: 34
+- Estado Crítico: 0
+- Atenção: 4
+
+Observação editorial: este prompt é um ponto de partida. No conteúdo, incentivar o usuário a continuar conversando com a IA e adaptar cores, textos, critérios e informações à própria rotina, sem apresentar o modelo como solução universal.

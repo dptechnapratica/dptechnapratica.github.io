@@ -1,0 +1,34 @@
+DP TECH NA PRÁTICA — ATALHO DP #004
+PROMPT DE TESTE — V2 (SEM GABARITO)
+
+Tenho uma planilha fictícia para calcular o adiantamento do 13º salário de um único funcionário. Quero aprender a montar as fórmulas no Excel, em português do Brasil, com ajuda da IA.
+
+Considere estas condições do exemplo:
+- Empregado mensalista, salário fixo, vínculo mantido até dezembro do ano-base.
+- Sem remuneração variável, afastamentos, faltas que reduzam os avos ou adiantamentos anteriores.
+- A projeção considera os meses de direito até dezembro do ano-base; não é o cálculo definitivo da segunda parcela.
+
+Utilize EXCLUSIVAMENTE os dados da aba "01_Entrada_VIDEO":
+- E10: data de admissão;
+- E12: salário fixo de referência;
+- E13: ano-base.
+
+Preciso das fórmulas para preencher:
+1. E17 — quantidade de avos do 13º até dezembro do ano-base. O mês da admissão conta somente se houver pelo menos 15 dias de serviço. Se a admissão for anterior ao ano-base, considere 12 avos; se for posterior ao ano-base, considere zero.
+2. E19 — valor bruto do 13º proporcional projetado, arredondado a duas casas decimais.
+3. E21 — adiantamento estimado correspondente a 50% do valor da célula E19, arredondado a duas casas decimais.
+
+Requisitos:
+- Retorne uma fórmula por célula, pronta para copiar e colar no Excel em português do Brasil, utilizando ponto e vírgula (;) nos argumentos.
+- Use SOMENTE nomes de funções existentes no Excel brasileiro. Caso precise encontrar o último dia do mês, a função correta em PT-BR é FIMMÊS (não "EOMÊS"). Você também pode usar a função DATA para calcular os dias do mês.
+- Não altere os dados, não recrie a planilha e não modifique as demais células.
+- Não consulte outras abas, gabaritos ou resultados previamente calculados. Faça os cálculos de forma independente.
+- Depois de cada fórmula, mostre o resultado que ela produziu e explique brevemente como o obteve.
+- Se não puder executar a fórmula no Excel diretamente, informe essa limitação e deixe claro que o resultado foi calculado por você, sem afirmar que testou no programa.
+- Não calcule INSS, IRRF, FGTS ou o saldo da segunda parcela.
+- Ao final, lembre que se trata de exemplo didático que deve ser conferido com a legislação vigente e o sistema de folha.
+
+Fontes oficiais para referência normativa:
+- Lei 4.090/1962: https://www.planalto.gov.br/ccivil_03/leis/l4090.htm
+- Lei 4.749/1965: https://www.planalto.gov.br/ccivil_03/leis/l4749.htm
+- Decreto 10.854/2021, arts. 76 e 78: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/decreto/d10854.htm
